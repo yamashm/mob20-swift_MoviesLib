@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC4645B7251D53B500ED0F08 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = AC4645B6251D53B500ED0F08 /* movies.json */; };
+		AC4645C0251D5C8100ED0F08 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4645BF251D5C8100ED0F08 /* Movies.swift */; };
 		ACDA294F251AB3580045C736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA294E251AB3580045C736 /* AppDelegate.swift */; };
 		ACDA2953251AB3580045C736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA2952251AB3580045C736 /* ViewController.swift */; };
 		ACDA2956251AB3580045C736 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDA2954251AB3580045C736 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC4645B6251D53B500ED0F08 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
+		AC4645BF251D5C8100ED0F08 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		ACDA294B251AB3580045C736 /* MoviesLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDA294E251AB3580045C736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACDA2952251AB3580045C736 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC4645B9251D556C00ED0F08 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC4645B6251D53B500ED0F08 /* movies.json */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		AC4645BA251D557F00ED0F08 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				ACDA294E251AB3580045C736 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AC4645BB251D559300ED0F08 /* MovieVisualization */ = {
+			isa = PBXGroup;
+			children = (
+				AC4645BE251D5C5300ED0F08 /* Model */,
+				AC4645BC251D55B600ED0F08 /* Controller */,
+			);
+			path = MovieVisualization;
+			sourceTree = "<group>";
+		};
+		AC4645BC251D55B600ED0F08 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ACDA2952251AB3580045C736 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AC4645BD251D560800ED0F08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACDA2957251AB35F0045C736 /* Assets.xcassets */,
+				ACDA2959251AB35F0045C736 /* LaunchScreen.storyboard */,
+				ACDA295C251AB35F0045C736 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC4645BE251D5C5300ED0F08 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC4645BF251D5C8100ED0F08 /* Movies.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		ACDA2942251AB3580045C736 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +109,11 @@
 		ACDA294D251AB3580045C736 /* MoviesLib */ = {
 			isa = PBXGroup;
 			children = (
-				ACDA294E251AB3580045C736 /* AppDelegate.swift */,
-				ACDA2952251AB3580045C736 /* ViewController.swift */,
+				AC4645B9251D556C00ED0F08 /* Files */,
+				AC4645BA251D557F00ED0F08 /* Main */,
+				AC4645BB251D559300ED0F08 /* MovieVisualization */,
 				ACDA2954251AB3580045C736 /* Main.storyboard */,
-				ACDA2957251AB35F0045C736 /* Assets.xcassets */,
-				ACDA2959251AB35F0045C736 /* LaunchScreen.storyboard */,
-				ACDA295C251AB35F0045C736 /* Info.plist */,
+				AC4645BD251D560800ED0F08 /* Supporting Files */,
 			);
 			path = MoviesLib;
 			sourceTree = "<group>";
@@ -124,6 +178,7 @@
 			files = (
 				ACDA295B251AB35F0045C736 /* LaunchScreen.storyboard in Resources */,
 				ACDA2958251AB35F0045C736 /* Assets.xcassets in Resources */,
+				AC4645B7251D53B500ED0F08 /* movies.json in Resources */,
 				ACDA2956251AB3580045C736 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +192,7 @@
 			files = (
 				ACDA2953251AB3580045C736 /* ViewController.swift in Sources */,
 				ACDA294F251AB3580045C736 /* AppDelegate.swift in Sources */,
+				AC4645C0251D5C8100ED0F08 /* Movies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +337,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MoviesLib/Info.plist;
+				INFOPLIST_FILE = "MoviesLib/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MoviesLib/Info.plist;
+				INFOPLIST_FILE = "MoviesLib/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
