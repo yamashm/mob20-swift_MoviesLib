@@ -15,12 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="D3a-Qm-LcC">
-                                <rect key="frame" x="73" y="181" width="321" height="294"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="D3a-Qm-LcC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D3a-Qm-LcC" secondAttribute="trailing" id="Jau-Uf-TWG"/>
+                            <constraint firstAttribute="bottom" secondItem="D3a-Qm-LcC" secondAttribute="bottom" id="TE0-sg-1yQ"/>
+                            <constraint firstItem="D3a-Qm-LcC" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="a2E-iL-kV4"/>
+                            <constraint firstItem="D3a-Qm-LcC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qA6-Dh-4Iq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
