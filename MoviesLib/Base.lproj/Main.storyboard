@@ -306,6 +306,9 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="26" id="Q2d-dc-U3y"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <segue destination="6B3-bs-jna" kind="show" id="LIG-tv-SQK"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXx-6m-zBW">
                                                                 <rect key="frame" x="35" y="0.0" width="300" height="23.666666666666668"/>
@@ -414,7 +417,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WYN-7K-jlA"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Cadastro de Filmes" largeTitleDisplayMode="never" id="YAM-Xl-3dy"/>
+                    <navigationItem key="navigationItem" title="Cadastro de Filmes" largeTitleDisplayMode="never" id="YAM-Xl-3dy">
+                        <barButtonItem key="backBarButtonItem" title=" " id="nx0-YQ-Rg3"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="buttonSave" destination="bNa-a9-V0z" id="rKf-cl-0ei"/>
                         <outlet property="imageViewPoster" destination="NgQ-wM-FmZ" id="SG1-kc-qXb"/>
@@ -430,20 +435,46 @@
             </objects>
             <point key="canvasLocation" x="1240.8" y="-596.30541871921184"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="4QU-7M-yPf">
+        <!--Categorias-->
+        <scene sceneID="ubY-zL-Uzn">
             <objects>
-                <viewController id="8jF-4E-4of" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WAg-7K-jRj">
+                <tableViewController id="6B3-bs-jna" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="K8L-dL-kSW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="INd-9V-84N"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZzW-56-gZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dCZ-Nr-Wra" style="IBUITableViewCellStyleDefault" id="dTA-BJ-mUg">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dTA-BJ-mUg" id="yMn-YY-w1Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dCZ-Nr-Wra">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6B3-bs-jna" id="7lC-jo-UUV"/>
+                            <outlet property="delegate" destination="6B3-bs-jna" id="NU2-pG-TkW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Categorias" id="Pvb-EX-b94">
+                        <barButtonItem key="backBarButtonItem" title=" " id="NUY-6S-gju"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qcE-KN-SI0"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eyQ-jA-zke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2065" y="-596"/>
+            <point key="canvasLocation" x="1996" y="-596"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OyG-JO-hOR">

@@ -5,7 +5,7 @@
 //  Created by Usuário Convidado on 24/09/20.
 //  Copyright © 2020 FIAP. All rights reserved.
 //
-
+/*
 import Foundation
 
 //Decodable, permite criar o objeto a partir do json
@@ -38,3 +38,4 @@ struct Movie: Decodable {
         image = try container.decodeIfPresent(String.self, forKey: .image) ?? "placeholder"
     }
 }
+*/

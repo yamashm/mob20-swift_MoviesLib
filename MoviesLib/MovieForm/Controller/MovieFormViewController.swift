@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieFormViewController: UIViewController {
+final class MovieFormViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var textFieldTitle: UITextField!
@@ -39,7 +39,7 @@ class MovieFormViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(<#T##animated: Bool##Bool#>)
+        super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
     
@@ -47,19 +47,53 @@ class MovieFormViewController: UIViewController {
     @IBAction func selectImage(_ sender: Any) {
     }
     @IBAction func save(_ sender: Any) {
+        if movie == nil{
+            movie = Movie(context: context)
+        }
+        movie?.title = textFieldTitle.text
+        movie?.summary = textViewSummary.text
+        movie?.duration = textFieldDuration.text
+        let rating = Double(textFieldRating.text!) ?? 0
+        movie?.rating = rating
+        movie?.image = imageViewPoster.image?.jpegData(compressionQuality: 0.9)
+        
+        view.endEditing(true) //Retira o teclado
+        
+        do{
+            try context.save()
+            navigationController?.popViewController(animated: true)
+        }catch{
+            print(error)
+        }
     }
     
     // MARK: - Methods
+    private func setupView(){
+        if let movie = movie{
+            title = "Edicao de filme"
+            textFieldTitle.text = movie.title
+            textFieldRating.text = "\(movie.rating ?? 0)"
+            textFieldDuration.text = movie.duration
+            textViewSummary.text = movie.summary
+            buttonSave.setTitle("Alterar", for: .normal)
+            if let data = movie.image {
+                imageViewPoster.image = UIImage(data: data)
+            }
+        }
+    }
+    
     @objc
     private func keyboardWillShow(notification: NSNotification){
         guard let userInfo = notification.userInfo, let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {return}
         //Altera o espaco na base da scrollview com base na altura do teclado tirando a safearea
         scrollView.contentInset.bottom = keyboardFrame.size.height - view.safeAreaInsets.bottom
+        scrollView.verticalScrollIndicatorInsets.bottom  = keyboardFrame.size.height - view.safeAreaInsets.bottom
     }
     
     @objc
     private func keyboardWillHide(){
-        
+        scrollView.contentInset.bottom = 0
+        scrollView.verticalScrollIndicatorInsets.bottom  = 0
     }
 
 }
