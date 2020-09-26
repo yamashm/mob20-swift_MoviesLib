@@ -11,6 +11,9 @@
 		AC0F72C1251F83E000B4E6F8 /* MovieFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F72C0251F83E000B4E6F8 /* MovieFormViewController.swift */; };
 		AC0F72C3251F92C300B4E6F8 /* UIViewController+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F72C2251F92C200B4E6F8 /* UIViewController+Context.swift */; };
 		AC0F72C7251FB13400B4E6F8 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F72C6251FB13400B4E6F8 /* CategoriesTableViewController.swift */; };
+		AC0F72CC251FCA8500B4E6F8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F72CB251FCA8500B4E6F8 /* MapViewController.swift */; };
+		AC0F72D0251FD92C00B4E6F8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F72CF251FD92C00B4E6F8 /* SettingsViewController.swift */; };
+		AC0F72D2251FDC8E00B4E6F8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC0F72D1251FDC8E00B4E6F8 /* Settings.bundle */; };
 		AC4645B7251D53B500ED0F08 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = AC4645B6251D53B500ED0F08 /* movies.json */; };
 		AC4645C0251D5C8100ED0F08 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4645BF251D5C8100ED0F08 /* Movies.swift */; };
 		AC4645C4251D719D00ED0F08 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4645C3251D719D00ED0F08 /* MoviesTableViewController.swift */; };
@@ -29,6 +32,9 @@
 		AC0F72C0251F83E000B4E6F8 /* MovieFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFormViewController.swift; sourceTree = "<group>"; };
 		AC0F72C2251F92C200B4E6F8 /* UIViewController+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Context.swift"; sourceTree = "<group>"; };
 		AC0F72C6251FB13400B4E6F8 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		AC0F72CB251FCA8500B4E6F8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AC0F72CF251FD92C00B4E6F8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AC0F72D1251FDC8E00B4E6F8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		AC4645B6251D53B500ED0F08 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 		AC4645BF251D5C8100ED0F08 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		AC4645C3251D719D00ED0F08 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
@@ -86,11 +92,44 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		AC0F72C8251FCA3D00B4E6F8 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				AC0F72CA251FCA6B00B4E6F8 /* Controller */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		AC0F72CA251FCA6B00B4E6F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC0F72CB251FCA8500B4E6F8 /* MapViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AC0F72CD251FD8FC00B4E6F8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AC0F72CE251FD90500B4E6F8 /* Controller */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		AC0F72CE251FD90500B4E6F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC0F72CF251FD92C00B4E6F8 /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		AC4645B9251D556C00ED0F08 /* Files */ = {
 			isa = PBXGroup;
 			children = (
 				AC4645B6251D53B500ED0F08 /* movies.json */,
 				AC0F72BA251F63DB00B4E6F8 /* MoviesLib.xcdatamodeld */,
+				AC0F72D1251FDC8E00B4E6F8 /* Settings.bundle */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -191,6 +230,8 @@
 		ACDA294D251AB3580045C736 /* MoviesLib */ = {
 			isa = PBXGroup;
 			children = (
+				AC0F72CD251FD8FC00B4E6F8 /* Settings */,
+				AC0F72C8251FCA3D00B4E6F8 /* Map */,
 				AC0F72C4251FB0E900B4E6F8 /* Categories */,
 				AC0F72BE251F83AC00B4E6F8 /* MovieForm */,
 				AC4645C8251D7D3800ED0F08 /* Extensions */,
@@ -264,6 +305,7 @@
 			files = (
 				ACDA295B251AB35F0045C736 /* LaunchScreen.storyboard in Resources */,
 				ACDA2958251AB35F0045C736 /* Assets.xcassets in Resources */,
+				AC0F72D2251FDC8E00B4E6F8 /* Settings.bundle in Resources */,
 				AC4645B7251D53B500ED0F08 /* movies.json in Resources */,
 				ACDA2956251AB3580045C736 /* Main.storyboard in Resources */,
 			);
@@ -276,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0F72CC251FCA8500B4E6F8 /* MapViewController.swift in Sources */,
 				AC0F72BD251F63DB00B4E6F8 /* MoviesLib.xcdatamodeld in Sources */,
 				AC4645C7251D7AA600ED0F08 /* MovieTableViewCell.swift in Sources */,
 				AC0F72C3251F92C300B4E6F8 /* UIViewController+Context.swift in Sources */,
@@ -286,6 +329,7 @@
 				ACDA294F251AB3580045C736 /* AppDelegate.swift in Sources */,
 				AC4645C0251D5C8100ED0F08 /* Movies.swift in Sources */,
 				AC0F72C7251FB13400B4E6F8 /* CategoriesTableViewController.swift in Sources */,
+				AC0F72D0251FD92C00B4E6F8 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
