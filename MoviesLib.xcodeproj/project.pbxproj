@@ -10,6 +10,7 @@
 		AC0F72BD251F63DB00B4E6F8 /* MoviesLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC0F72BA251F63DB00B4E6F8 /* MoviesLib.xcdatamodeld */; };
 		AC0F72C1251F83E000B4E6F8 /* MovieFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F72C0251F83E000B4E6F8 /* MovieFormViewController.swift */; };
 		AC0F72C3251F92C300B4E6F8 /* UIViewController+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F72C2251F92C200B4E6F8 /* UIViewController+Context.swift */; };
+		AC0F72C7251FB13400B4E6F8 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0F72C6251FB13400B4E6F8 /* CategoriesTableViewController.swift */; };
 		AC4645B7251D53B500ED0F08 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = AC4645B6251D53B500ED0F08 /* movies.json */; };
 		AC4645C0251D5C8100ED0F08 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4645BF251D5C8100ED0F08 /* Movies.swift */; };
 		AC4645C4251D719D00ED0F08 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4645C3251D719D00ED0F08 /* MoviesTableViewController.swift */; };
@@ -27,6 +28,7 @@
 		AC0F72BC251F63DB00B4E6F8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		AC0F72C0251F83E000B4E6F8 /* MovieFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFormViewController.swift; sourceTree = "<group>"; };
 		AC0F72C2251F92C200B4E6F8 /* UIViewController+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Context.swift"; sourceTree = "<group>"; };
+		AC0F72C6251FB13400B4E6F8 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		AC4645B6251D53B500ED0F08 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 		AC4645BF251D5C8100ED0F08 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		AC4645C3251D719D00ED0F08 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,22 @@
 			isa = PBXGroup;
 			children = (
 				AC0F72C0251F83E000B4E6F8 /* MovieFormViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AC0F72C4251FB0E900B4E6F8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AC0F72C5251FB0FC00B4E6F8 /* Controller */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		AC0F72C5251FB0FC00B4E6F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC0F72C6251FB13400B4E6F8 /* CategoriesTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +191,7 @@
 		ACDA294D251AB3580045C736 /* MoviesLib */ = {
 			isa = PBXGroup;
 			children = (
+				AC0F72C4251FB0E900B4E6F8 /* Categories */,
 				AC0F72BE251F83AC00B4E6F8 /* MovieForm */,
 				AC4645C8251D7D3800ED0F08 /* Extensions */,
 				AC4645C1251D712500ED0F08 /* MovieListing */,
@@ -266,6 +285,7 @@
 				ACDA2953251AB3580045C736 /* MovieViewController.swift in Sources */,
 				ACDA294F251AB3580045C736 /* AppDelegate.swift in Sources */,
 				AC4645C0251D5C8100ED0F08 /* Movies.swift in Sources */,
+				AC0F72C7251FB13400B4E6F8 /* CategoriesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
