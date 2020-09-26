@@ -256,7 +256,7 @@
         <!--Cadastro de Filmes-->
         <scene sceneID="UuA-jI-V4b">
             <objects>
-                <viewController id="9k2-9a-pa6" sceneMemberID="viewController">
+                <viewController id="9k2-9a-pa6" customClass="MovieFormViewController" customModule="MoviesLib" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="71h-hP-nRK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,6 +329,9 @@
                                                                         <exclude reference="m2f-2a-8lE"/>
                                                                     </mask>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="selectImage:" destination="9k2-9a-pa6" eventType="touchUpInside" id="ghs-c7-QWl"/>
+                                                                </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NgQ-wM-FmZ">
                                                                 <rect key="frame" x="0.0" y="30.000000000000028" width="335" height="140"/>
@@ -369,6 +372,9 @@
                                                         <state key="normal" title="Button">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="save:" destination="9k2-9a-pa6" eventType="touchUpInside" id="p7P-Mh-d2o"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -409,6 +415,16 @@
                         <viewLayoutGuide key="safeArea" id="WYN-7K-jlA"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro de Filmes" largeTitleDisplayMode="never" id="YAM-Xl-3dy"/>
+                    <connections>
+                        <outlet property="buttonSave" destination="bNa-a9-V0z" id="rKf-cl-0ei"/>
+                        <outlet property="imageViewPoster" destination="NgQ-wM-FmZ" id="SG1-kc-qXb"/>
+                        <outlet property="labelCategories" destination="AXx-6m-zBW" id="N51-p0-5EC"/>
+                        <outlet property="scrollView" destination="n7C-YJ-u9D" id="ROi-A0-ivc"/>
+                        <outlet property="textFieldDuration" destination="Psb-bc-zNT" id="lm2-SM-SOC"/>
+                        <outlet property="textFieldRating" destination="kgk-hy-n90" id="Rsu-Jv-uSk"/>
+                        <outlet property="textFieldTitle" destination="V0z-Dr-gab" id="8Za-OJ-lam"/>
+                        <outlet property="textViewSummary" destination="Tu4-lT-mgA" id="hhI-vB-yxF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pue-ii-9aY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
