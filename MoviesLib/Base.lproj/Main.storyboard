@@ -117,6 +117,11 @@
                                     <constraint firstAttribute="height" constant="330" id="nRW-g0-77d"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e7b-Eu-And">
+                                <rect key="frame" x="16" y="111" width="321" height="181"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrY-di-mpa">
                                 <rect key="frame" x="157.66666666666666" y="135" width="60" height="60"/>
                                 <constraints>
@@ -124,6 +129,9 @@
                                     <constraint firstAttribute="width" secondItem="KrY-di-mpa" secondAttribute="height" id="sWy-n1-KWh"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="play"/>
+                                <connections>
+                                    <action selector="playTrailer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fGW-QA-1ze"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="hE5-Wj-8rG">
                                 <rect key="frame" x="0.0" y="270" width="375" height="60"/>
@@ -250,11 +258,12 @@
                         <outlet property="labelRating" destination="wAs-QY-lfH" id="lk7-G4-smf"/>
                         <outlet property="labelTitle" destination="ycQ-wU-E4a" id="JPH-pv-9dY"/>
                         <outlet property="textViewSummary" destination="VuN-mT-DyD" id="381-kf-jlR"/>
+                        <outlet property="viewTrailer" destination="e7b-Eu-And" id="Nue-bc-iuh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1242" y="106"/>
+            <point key="canvasLocation" x="1240.8" y="105.66502463054188"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="GWS-VC-Bv6">
